@@ -18,21 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Keunhong Park
-name: Keunhong Park
-position: Research Scientist 
-email: dp9jalxhq@mozmail.com
+title: Luca Cogo
+name: Luca Cogo
+position: PhD Student 
+email: l.cogo@campus.unimib.it.com
 description: >-
-  I am a research scientist at [Google](https://ai.google/research/), where I work on generative models for 3D at internet scale.
-
-
-  Previously, I was a Ph. D student at the [University of Washington](https://grail.cs.washington.edu/) advised by
-  [Ali Farhadi](https://homes.cs.washington.edu/~ali/) and
-  [Steve Seitz](https://homes.cs.washington.edu/~seitz/).
+  I am a PhD student at [Imaging an Vision Laboratory](https://it.linkedin.com/company/ivlab)\|[University of Milano-Bicocca](https://en.unimib.it/), where I work on computational photography and image enhancement.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://keunhong.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: KeunhongP
-github_username: keunhong
+url: "https://lucacogo.github.com" # the base hostname & protocol for your site, e.g. http://example.com
+linkedin_username: luca-cogo
+github_username: LucaCogo
 google_scholar: HVZb-5oAAAAJ
 google_analytics: G-MFWSBLRKG0
 
@@ -40,9 +35,11 @@ google_analytics: G-MFWSBLRKG0
 theme: minima
 plugins:
   - jekyll-feed
-
 sass:
   style: compact
+
+minima:
+  skin: dark
 
 # Exclude from processing.
 # The following items will not be processed, by default.

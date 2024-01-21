@@ -42,7 +42,7 @@ layout: null
 
         <div class="column is-4">
           <div class="portrait">
-            <img src="{{ '/images/portrait.jpg' | relative_url }}" />
+            <img src="{{ '/images/portrait_square.png' | relative_url }}" />
           </div>
         </div>
 
@@ -53,25 +53,30 @@ layout: null
           <div class="content has-text-justified">
             {{ site.description | markdownify }}
             <div class="buttons">
-              <a class="external-link button is-light" href="cv.html">
+              <a class="external-link button is-light" href="resources/Luca_Cogo_resume_Nov23.pdf">
                 <span class="icon"><i class="fas fa-file"></i></span>
                 <span>CV</span>
               </a>
 
-              <a class="external-link button is-light"
+              <a class="external-link button is-light" href="mailto:{{site.email}}">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+                <span>Email</span>
+              </a>
+
+              <!-- <a class="external-link button is-light"
                 href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
                 <span class="icon"><i class="ai ai-google-scholar"></i></span>
                 <span>Scholar</span>
-              </a>
+              </a> -->
 
               <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}">
                 <span class="icon"><i class="fab fa-github"></i></span>
                 <span>Github</span>
               </a>
 
-              <a class="external-link button is-light" href="https://twitter.com/{{ site.twitter_username }}">
-                <span class="icon"><i class="fab fa-twitter"></i></span>
-                <span>Twitter</span>
+              <a class="external-link button is-light" href="https://linkedin.com/in/{{ site.linkedin_username }}">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+                <span>Linkedin</span>
               </a>
             </div>
 
@@ -182,9 +187,11 @@ layout: null
         <a class="external-link" href="https://github.com/{{ site.github_username }}">
           <i class="fab fa-github"></i>
         </a>
-        <a class="external-link" href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
+        <!-- <a class="external-link" href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
           <i class="ai ai-google-scholar"></i>
-        </a>
+        </a> -->
+        <a class="external-link" href="https://linkedin.com/in/{{ site.linkedin_username }}">
+          <i class="fab fa-linkedin"></i>
       </div>
       <div class="columns is-centered has-text-centered">
         <div class="column is-8">
