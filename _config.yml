@@ -29,7 +29,6 @@ url: "https://lucacogo.github.com" # the base hostname & protocol for your site,
 linkedin_username: luca-cogo
 github_username: LucaCogo
 google_scholar: HVZb-5oAAAAJ
-google_analytics: G-MFWSBLRKG0
 
 # Build settings
 theme: minima
@@ -38,8 +37,6 @@ plugins:
 sass:
   style: compact
 
-minima:
-  skin: dark
 
 # Exclude from processing.
 # The following items will not be processed, by default.
