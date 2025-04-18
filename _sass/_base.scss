@@ -19,6 +19,15 @@ strong {
   color: var(--global-text-color);
 }
 
+h1 {
+  text-align: right;
+}
+
+.clearfix{
+  vertical-align: center;
+  font-size: 1.25rem;
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -229,8 +238,8 @@ ul.task-list input[type="checkbox"] {
 
 .post-description {
   margin-bottom: 2rem;
-  font-size: 0.875rem;
-
+  // font-size: 0.875rem;
+  
   a {
     color: inherit;
 
@@ -398,10 +407,10 @@ ul.task-list input[type="checkbox"] {
 // Social (bottom)
 
 .social {
-  text-align: center;
+  text-align: right;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 2rem;
 
     a {
       img {
