@@ -4,6 +4,17 @@
 
 // Typography
 
+// html {
+//   transform: scale(1.6);
+//   transform-origin: top left;
+//   width: 62.5%; /* 100% / 1.6 */
+//   height: 62.5%;
+// }
+
+html {
+  font-size: 160%;
+}
+
 p,
 h1,
 h2,
@@ -17,15 +28,6 @@ li,
 span,
 strong {
   color: var(--global-text-color);
-}
-
-h1 {
-  text-align: right;
-}
-
-.clearfix{
-  vertical-align: center;
-  font-size: 1.25rem;
 }
 
 hr {
@@ -407,7 +409,7 @@ ul.task-list input[type="checkbox"] {
 // Social (bottom)
 
 .social {
-  text-align: right;
+  text-align: center;
 
   .contact-icons {
     font-size: 2rem;
@@ -738,8 +740,6 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
 
-      .preview {
-      }
 
       .abbr {
         margin-bottom: 0.5rem;

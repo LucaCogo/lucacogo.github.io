@@ -5,9 +5,9 @@ permalink: /
 subtitle: 
 
 profile:
-  align: left
+  align: center
   image: profile_square.png
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
 
 
@@ -25,6 +25,6 @@ social: true # includes social icons at the bottom of the page
 #   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Ph.D. student at <a href="http://ivl.disco.unimib.it">Imaging and Vision Lab</a>, in the Department of Informatics, Systems and Communication (DISCo) of the University of Milano-Bicocca. \\
-I obtained my B.Sc. and M.Sc. degrees in Computer Science at University of Milano-Bicocca respectively in 2020 and 2023. \\
-My research focuses on computational photography, color and spectral imaging.
+I am a Ph.D. student at <a href="http://ivl.disco.unimib.it">Imaging and Vision Lab</a>, in the Department of Informatics, Systems and Communication (DISCo) of the University of Milano-Bicocca. <br>
+I obtained my B.Sc. and M.Sc. degrees in Computer Science at University of Milano-Bicocca respectively in 2020 and 2023. <br>
+My research focuses on **computational photography**, **color constancy** and **spectral imaging**.

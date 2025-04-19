@@ -1,80 +1,200 @@
----
-layout: default
----
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luca Cogo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
 
-    <div class="clearfix">{{ content }}</div>
+    body {
+      display: flex;
+      flex-direction: column;
+    }
 
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
+    /* header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+    } */
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
+    .logo img {
+      width: 40px;
+      height: 40px;
+    }
 
-    <!-- Social -->
-    {% if page.social %}
+    .menu-icon {
+      font-size: 24px;
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    nav a.active {
+      color: #007bff;
+      border-bottom: 1px solid #007bff;
+    }
+
+    .main {
+      flex: 1; /* Pushes footer down */
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+      flex-wrap: wrap;
+    }
+
+    .profile-pic {
+      width: 450px;
+      height: 600px;
+      object-fit: cover;
+      /* background-color: #ddd; */
+      background-image: url('/assets/img/profile_square.png');
+      background-size: cover;
+      background-position: center;
+      margin-right: 50px;
+      border-radius: 8px;
+    }
+
+    .content {
+      max-width: 600px;
+      flex: 1;
+    }
+
+    .content h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .highlight {
+      color: #007bff;
+    }
+
+    .location {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .icons {
+      margin-top: 20px;
+      font-size: 1.5em;
+    }
+
+    .icons span {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-color: #ccc;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    footer {
+      text-align: left;
+      padding: 20px 40px;
+      font-size: 0.8em;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 1085px) {
+      .menu-icon {
+        display: block;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .main {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+      }
+
+      .profile-pic {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        margin: 0 0 30px 0;
+      }
+
+      .content {
+        text-align: center;
+      }
+
+      .content h1 {
+        font-size: 2em;
+      }
+
+      .icons {
+        justify-content: center;
+      }
+    }
+  </style>
+
+{% include head.liquid %}
+</head>
+<body>
+
+
+ 
+<!-- Header -->
+{% include header.liquid %}
+
+<div class="main">
+  <div class="profile-pic"></div>
+  <div class="content">
+
+    <h4>Hi!</h4>
+    <h1>I am <strong>{{ site.first_name }}</strong> {{ site.last_name }}</h1>
+    <h2> </h2>
+    <p>
+      {{ content }}
+    </p>
+    <!-- <p class="location">📍 Milano, Italy</p> -->
+    <!-- <div class="icons">
+      <span title="Email"></span>
+      <span title="GitHub"></span>
+      <span title="Academic"></span>
+      <span title="ORCID"></span>
+      <span title="LinkedIn"></span>
+    </div> -->
+
+      {% if page.social %}
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
       </div>
-    {% endif %}
-
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+      {% endif %}
+  </div>
 </div>
+
+<!-- JavaScripts -->
+{% include scripts.liquid %}
+
+</body>
+</html>
