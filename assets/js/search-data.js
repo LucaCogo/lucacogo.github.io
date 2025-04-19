@@ -50,6 +50,13 @@ ninja.data = [{
           window.open("https://orcid.org/0009-0001-0056-053X", "_blank");
         },
       },{
+        id: 'social-resume_url',
+        title: 'Resume_url',
+        section: 'Socials',
+        handler: () => {
+          window.open("", "_blank");
+        },
+      },{
         id: 'social-scholar',
         title: 'Google Scholar',
         section: 'Socials',
